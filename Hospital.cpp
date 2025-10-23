@@ -10,10 +10,48 @@ struct HospitalBasicInfo {
 	char direccion[150];
 	char numerotlf [15];
 };
-	HospitalBasicInfo BasicInfo;
+
+HospitalBasicInfo BasicInfo;
+	
+int capacidadpacientes;
+	
+struct pacientes{
+};
+
+pacientes* Pacientes = new pacientes[capacidadpacientes];
+
+int capacidaddocs;
+	
+struct doctores{
+};
+
+doctores* Doctores = new doctores[capacidaddocs];
+
+int capacidadcitas;
+	
+struct citas{
+};
+
+citas* Citas = new citas[capacidadcitas];
+
+auto incrementar = [](int* ptr) {
+        *ptr += 1;
+    };
+    
+	int IDN = 1;
+	int* IDpacientes = &IDN;
+	int IDdocs = 1;
+	int IDcita = 1;
+	int IDconsultas = 1;
+
+
 
 	
 int main(){
+	
+	cout << "Antes de ingresar un paciente la ID es " << IDN << endl;
+	incrementar(&IDN);
+	cout << "Despues de ingresar un paciente la ID es " << IDN << endl;
 	
 	cout << "Ingresa un nombre" << endl;
 	cin.ignore();
